@@ -16,7 +16,18 @@
 <style>.events-view{display:none;width:min(90%,720px);max-width:none;margin-inline:auto;padding-inline:0}.events-view:target{display:block}main:has(>.events-view:target)>section:not(.events-view){display:none}.events-view h1{margin-top:35px}.events-intro,.events-view article p:not(.eyebrow){max-width:100%;font-size:19px;line-height:1.55}.events-view article{border-top:1px solid var(--line);margin-top:42px;padding-top:24px}.events-view h2{font-size:clamp(30px,4vw,48px);margin:.5em 0}.events-view .event-action{width:min(100%,220px);font-weight:400;text-decoration:none;cursor:pointer}
 .events-view .event-signup{padding:0;border:0}
 .event-signup summary::-webkit-details-marker{display:none}
-.event-signup .hs-form-frame{margin-top:20px;width:100%}body:has(.events-view:target) .events-link{text-decoration:underline;text-underline-offset:.35em}
+.event-signup .hs-form-html{margin-top:20px;width:100%}
+.events-view .event-signup .hs-form-html :is(button[type="submit"],input[type="submit"],[data-hsfc-id="Button"]){
+  --submit-bg:var(--ink);--submit-dot:var(--accent);
+  box-sizing:border-box;width:min(100%,220px);max-width:100%;min-height:55px;
+  padding:18px 45px 18px 23px;border:1px solid var(--submit-bg);border-radius:0;
+  background:radial-gradient(circle at right 28px center,var(--submit-dot) 4.7px,transparent 5.3px) var(--submit-bg);
+  color:white;font:400 15px/1.2 Arial,Helvetica,sans-serif;text-align:left;justify-content:flex-start;
+  box-shadow:none;cursor:pointer;transition:background-color .2s,transform .2s;
+}
+.events-view .event-signup .hs-form-html :is(button[type="submit"],input[type="submit"],[data-hsfc-id="Button"]):hover:not(:disabled){--submit-bg:var(--accent);--submit-dot:var(--ink);color:var(--ink);transform:translateY(-2px)}
+.events-view .event-signup .hs-form-html :is(button[type="submit"],input[type="submit"],[data-hsfc-id="Button"]):focus-visible{outline:3px solid #57a9ae;outline-offset:6px}
+body:has(.events-view:target) .events-link{text-decoration:underline;text-underline-offset:.35em}
 @media(max-width:760px){.nav>a.events-link{display:block}.nav{gap:12px}}
 </style><style>
 .credit .civa-logo{width:80px;height:44px;object-fit:contain}
@@ -47,8 +58,8 @@ ideas<span class="dot" aria-hidden="true"></span></h2></div><div class="call-cop
 <p class="event-meta"><strong>South Yorkshire | Time and Date TBC</strong></p>
 <p>Young people, local innovators and potential backers will come together to explore ideas from the campaign. What could we test first? Who would need to be involved? The event will be in mid-March.</p>
 <details class="event-signup"><summary class="button event-action">Register interest <span class="button-dot" aria-hidden="true"></span></summary>
-<script src="https://js.hsforms.net/forms/embed/19602412.js" defer></script>
-<div class="hs-form-frame" data-region="na1" data-form-id="d1a71684-c1c5-4c22-beba-785777dd21a6" data-portal-id="19602412"></div>
+<script src="https://js.hsforms.net/forms/embed/developer/19602412.js" defer></script>
+<div class="hs-form-html" data-region="na1" data-form-id="d1a71684-c1c5-4c22-beba-785777dd21a6" data-portal-id="19602412"></div>
 </details></article>
 <script defer id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 </section></main>
